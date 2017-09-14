@@ -1,6 +1,16 @@
 @charset "UTF-8";
 /* CSS Document */
 
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: Open Sans;
+	color: #002C41; 
+}
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -29,7 +39,90 @@
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
+nav a, h1, .f-right h2, header p, p a {
+	font-family: Playfair Display;	
+}
 
+h1, header p, .f-right h2 {
+	font-style: italic;
+}
+
+h1, h2, header p, a, footer {
+	text-transform: uppercase;
+}
+
+header li, footer li, footer .f-right a, .bg-white .f-right li, .bg-white .f-right a {
+	display: inline-block;
+}
+
+header p a, header p, .f-right h2 {
+	color: #E5B02C;
+}
+
+#about-white-bg, .wrapper {
+	margin: 0 auto;
+}
+
+.f-right h2, header p {
+	font-size: 30px;
+}
+
+p, nav a, footer {
+	font-size: 14px;
+}
+
+h1, header .f-left p, footer li {
+	font-weight: 900;
+}
+
+span {
+	display: none;
+}
+
+h1, header p {
+	text-align: center;
+}
+
+#home h1, #home header p {
+	text-align: left;
+} 
+
+header .f-left p a:hover, footer .f-left a:hover {
+	color: #002C41;
+}
+
+nav a:hover {
+	color: #E5B02C;
+}
+
+/*1.1 - Headings*/
+h1 {
+	font-size: 48px;
+}
+
+.bg-white h2 {
+	font-weight: normal;
+}
+
+/*1.2 - Body Copy*/
+p {
+	line-height: 25px;
+}
+
+/*1.3 - Buttons*/
+a {
+	text-decoration: none;
+}
+
+/*1.5 - Lists*/
+
+header li {
+	font-weight: 600;
+}
+
+footer li, footer a {
+	color: #fff;
+}
 
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
@@ -40,14 +133,36 @@
 3.0 - Content
 -------------------------------------------------------------- */
 /*3.1 - Site Structure*/
+.wrapper {
+	width: 1170px;
+	padding: 110px 0;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.row {
+	overflow: auto;
+}
+
+#home {
+	height: 83vh;
+	min-height: 250px;
+}
+
 .hover-parent {
 	position: relative;
 	top: 0; 
 	left: 0;
-	width: 300px;
-	height: 300px;
+	width: 371px;
+	height: 357px;
 	float: left;
-	margin-right: 135px;
+	margin-right: 28px;
 }
 
 .hover-parent:last-child {
@@ -55,15 +170,14 @@
 	float: right;
 }
 
-
 .hover-content {
 	display: none;
 }
 
 .hover-parent:hover .hover-content {
-	background-color: rgba(6, 6, 51, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 	text-align: center;
-	color: #fff;
+	color: #002C41;
 	padding-top: 33%;
 	width: 100%;
 	height: 100%;
@@ -73,20 +187,130 @@
 	left: 0;
 }
 
-/*--------------------------------------------------------------
-1.0 - Typography
--------------------------------------------------------------- */
+.f-left li {
+	padding-right: 45px;
+}
+
+.f-right li {
+	padding-left: 45px;
+}
+
+footer .f-right li {
+	padding-left: 20px;
+}
+
+.bg-white li a {
+	padding-right: 20px;
+}
+
+#home .bg-white {
+	width: 730px;
+}
+
+.bg-white {
+	width: 895px;
+}
+
+#home h1, #home p{
+	padding: 0 30px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+#about-white-bg .f-left {
+	width: 371px;
+}
+
+header.wrapper, footer div.wrapper {
+	padding: 0;
+}
+
+nav li {
+	margin-top: 20px;
+}
+
+footer .f-left li {
+	margin-top: 10px;
+}
 
 
 /*--------------------------------------------------------------
-1.0 - Typography
+4.0 - Media
 -------------------------------------------------------------- */
+footer .f-right a, .bg-white .f-right a {
+	width: 25px;
+	height: 25px;
+}
 
+footer .f-right li:first-child a {
+	background: url(../img/icon-facebook.png) no-repeat 0 0;
+}
 
+footer .f-right li:nth-child(2) a {
+	background: url(../img/icon-tumblr.png) no-repeat 0 0;
+}
 
+footer .f-right li:nth-child(3) a {
+	background: url(../img/icon-pinterest.png)no-repeat 0 0;
+}
 
+footer .f-right li:nth-child(4) a {
+	background: url(../img/icon-linked-in.png)no-repeat 0 0;
+}
 
+footer .f-right li:last-child a {
+	background: url(../img/icon-google.png)no-repeat 0 0;
+}
 
+.bg-white .f-right li:first-child a {
+	background: url(../img/icon-about-facebook.png) no-repeat 0 0;
+}
+
+.bg-white .f-right li:nth-child(2) a {
+	background: url(../img/icon-about-tumblr.png) no-repeat 0 0;
+}
+
+.bg-white .f-right li:nth-child(3) a {
+	background: url(../img/icon-about-pinterest.png) no-repeat 0 0;
+}
+
+.bg-white .f-right li:nth-child(4) a {
+	background: url(../img/icon-about-linked-in.png) no-repeat 0 0;
+}
+
+.bg-white .f-right li:last-child a {
+	background: url(../img/icon-about-google.png) no-repeat 0 0;
+}
+
+footer .f-right li a:hover, .bg-white .f-right li a:hover {
+	background-position: 0 -25px;
+}
+
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+.bg-blue {
+	background-color: #002C41;
+}
+
+.bg-gold {
+	background-color:  #E5B02C; 
+}
+
+.bg-grey {
+	background-color: #EEEEEE;
+}
+
+.bg-white {
+	background-color: #fff;
+	padding: 35px 7px;
+}
+
+#about-white-bg {
+	padding: 35px 100px;
+}
 
 
 

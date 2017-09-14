@@ -13,7 +13,9 @@ HEADER
 ============================================================-->
 <header class="wrapper">
 	<div class="row">
-		<p class="f-left"><a href="index.html">Cat Gries</a></p>
+		<div class="f-left">
+			<p><a href="index.html">Cat Gries</a></p>
+		</div>
 		<nav class="f-right">
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -34,18 +36,15 @@ BODY
 			<p>Get In Touch</p>
 		</header>
 		<form>
-			<div class="row">
-				<div class="f-left">
-					<label for="name">Name</label>
-					<input type="text" name="Name" id="name">
-				</div>
-				<div class="f-right">
-					<label for="email">Email</label>
-					<input type="text" name="Email" id="email">
-				</div>
-			</div>
+			<label for="name">Name</label>
+			<input type="text" name="Name" id="name">
+
+			<label for="email">Email</label>
+			<input type="email" name="Email" id="email">
+
 			<label for="message">Message</label>
 			<textarea name="Message" id="message"></textarea>
+			
 			<p><a href="#">Send Message</a></p>
 		</form>
 	</div>
