@@ -31,9 +31,6 @@
 	3.3	- Site Footer
 4.0 - Media
 5.0 - Utility
-	5.1 - Text Sizes
-	5.2 - Colors
-	5.3 - Alignments
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -51,15 +48,23 @@ h1, h2, header p, a, footer {
 	text-transform: uppercase;
 }
 
-header li, footer li, footer .f-right a, .bg-white .f-right li, .bg-white .f-right a {
+header li, footer li, footer .f-right a, .bg-white .f-right li, .bg-white .f-right a, placeholder {
 	display: inline-block;
 }
 
-header p a, header p, .f-right h2 {
+header p a, header p, .f-right h2, nav a:hover {
 	color: #E5B02C;
 }
 
-#about-white-bg, .wrapper {
+header .f-left p a:hover, footer .f-left a:hover, .hover-parent:hover .hover-content {
+	color: #002C41;
+}
+
+.bg-blue .f-left a, .bg-grey p a, footer li, footer a {
+	color: #fff;
+}
+
+#about-white-bg, .wrapper, form, #portfolio div div.row:last-child {
 	margin: 0 auto;
 }
 
@@ -71,32 +76,28 @@ p, nav a, footer {
 	font-size: 14px;
 }
 
-h1, header .f-left p, footer li {
+.bg-blue .f-left p:first-child, .bg-blue .f-left a, .bg-grey p a {
+	font-weight: bold;
+}
+
+h1, header .f-left p, footer li, .bg-grey h2 {
 	font-weight: 900;
 }
 
-span {
-	display: none;
-}
-
-h1, header p {
+h1, header p, .hover-parent:hover .hover-content {
 	text-align: center;
 }
 
-#home h1, #home header p {
+#home h1, #home header p, #card h1, #card p {
 	text-align: left;
 } 
 
-header .f-left p a:hover, footer .f-left a:hover {
-	color: #002C41;
+span, .hover-content, label {
+	display: none;
 }
 
-nav a:hover {
-	color: #E5B02C;
-}
-
-#card h1, #card p {
-	text-align: left;
+.hover-parent:hover .hover-content, textarea {
+	width: 100%;
 }
 
 /*1.1 - Headings*/
@@ -110,7 +111,6 @@ h1 {
 
 .bg-grey h2 {
 	font-size: 44px;
-	font-weight: 900;
 }
 
 /*1.2 - Body Copy*/
@@ -118,25 +118,69 @@ p {
 	line-height: 25px;
 }
 
+.bg-grey header > p {
+	padding-bottom:  80px;
+}
+
 /*1.3 - Buttons*/
 a {
 	text-decoration: none;
 }
 
-/*1.5 - Lists*/
-
-header li {
-	font-weight: 600;
+/*1.4 - Forms*/
+form {
+	width: 830px;
 }
 
-footer li, footer a {
-	color: #fff;
+input {
+	width: 400px;
+	height: 45px;
+	margin-right: 25px;
 }
+
+textarea {
+	height: 225px;
+	margin-top: 35px;
+	padding-top: 15px;
+}
+
+input, textarea {
+	text-indent: 15px;
+	border: none;
+}
+
+::-webkit-input-placeholder { 
+  text-transform: uppercase;
+  color: #002C41;
+  font-size: 14px;
+  font-weight: 100;
+}
+::-moz-placeholder { 
+  text-transform: uppercase;
+  color: #002C41;
+  font-size: 14px;
+  font-weight: 100;
+}
+:-ms-input-placeholder { 
+  text-transform: uppercase;
+  color: #002C41;
+  font-size: 14px;
+  font-weight: 100;
+}
+:-moz-placeholder { 
+  text-transform: uppercase;
+  color: #002C41;
+  font-size: 14px;
+  font-weight: 100;
+}
+
 
 /*--------------------------------------------------------------
 2.0 - Navigation Menus
 -------------------------------------------------------------- */
-
+header li {
+	font-weight: 600;
+}
 
 /*--------------------------------------------------------------
 3.0 - Content
@@ -147,11 +191,11 @@ footer li, footer a {
 	padding: 110px 0;
 }
 
-.f-left {
+.f-left, .hover-parent {
 	float: left;
 }
 
-.f-right {
+.f-right, .hover-parent:last-child {
 	float: right;
 }
 
@@ -165,39 +209,52 @@ footer li, footer a {
 }
 
 .hover-parent {
-	position: relative;
-	top: 0; 
-	left: 0;
-	width: 371px;
+	position: relative; 
 	height: 357px;
-	float: left;
 	margin-right: 28px;
 }
 
-.hover-parent:last-child {
-	margin-right: 0;
-	float: right;
-}
-
-.hover-content {
-	display: none;
-}
-
-.hover-parent:hover .hover-content {
-	background-color: rgba(255, 255, 255, 0.5);
-	text-align: center;
-	color: #002C41;
-	padding-top: 33%;
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: absolute;
+.hover-parent, .hover-parent:hover .hover-content {
 	top: 0;
 	left: 0;
 }
 
+input:last-of-type, .hover-parent:last-child {
+	margin-right: 0;
+}
+
+.hover-parent:hover .hover-content {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding-top: 33%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+/*Padding & Margin*/
+
+#about-white-bg {
+	padding: 35px 100px 72px 100px;
+}
+
+#home h1, #home p{
+	padding: 0 30px;
+}
+
+.bg-blue .f-left a, .bg-grey p a {
+	padding: 10px 30px;
+}
+
+header.wrapper, footer div.wrapper {
+	padding: 0;
+}
+
 .f-left li {
 	padding-right: 45px;
+}
+
+.bg-white li {
+	padding-right: 20px;
 }
 
 .f-right li {
@@ -208,34 +265,8 @@ footer .f-right li {
 	padding-left: 20px;
 }
 
-
-.bg-white li {
-	padding-right: 20px;
+ul, .bg-white li {
 	padding-left: 0;
-}
-
-#home .bg-white {
-	width: 730px;
-}
-
-.bg-white {
-	width: 895px;
-}
-
-#home h1, #home p{
-	padding: 0 30px;
-}
-
-ul {
-	padding-left: 0;
-}
-
-#about-white-bg .f-left {
-	width: 371px;
-}
-
-header.wrapper, footer div.wrapper {
-	padding: 0;
 }
 
 nav li {
@@ -246,47 +277,32 @@ footer .f-left li {
 	margin-top: 10px;
 }
 
-.bg-blue .f-left p:first-child {
-	margin-top: 0;
-	font-weight: bold;
+#home .bg-white {
+	width: 730px;
 }
 
-.bg-blue .f-left a, .bg-grey p a {
-	background-color: #002C41;
-	color: #fff;
-	padding: 10px 30px;
-	font-weight: bold;
+.bg-white {
+	width: 895px;
 }
 
-.bg-blue .f-left a:hover, .bg-grey p a:hover {
-	background-color: #E5B02C;
+#about-white-bg .f-left, .hover-parent {
+	width: 371px;
 }
 
-
-.bg-blue .f-left p:last-child, .bg-grey p {
+.bg-blue .f-left p:last-child, .bg-grey p, #portfolio div div.row:last-child {
 	margin-top: 40px;
-}
-
-.bg-grey h1 {
-	margin-top: 0;
 }
 
 h1 {
 	margin-bottom: 15px;
 }
 
-#about-white-bg header > p, .bg-grey header > p {
+#about-white-bg header > p, .bg-grey header > p, .bg-grey h1, .bg-blue .f-left p:first-child {
 	margin-top: 0;
-}
-
-.bg-grey header > p {
-	padding-bottom:  80px;
 }
  
 #portfolio div div.row:last-child {
 	width: 775px;
-	margin: 0 auto;
-	margin-top: 40px;
 }
 
 #portfolio .row {
@@ -295,6 +311,24 @@ h1 {
 
 #card .f-right {
 	width: 528px;
+	padding-left: 40px;
+}
+
+#card header p {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#card div.f-right > p {
+	margin-top: 25px;
+}
+
+#card div.f-right img {
+	padding-top: 114px;
+}
+
+#card div.f-right img:last-child {
+	padding-top: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -352,30 +386,21 @@ footer .f-right li a:hover, .bg-white .f-right li a:hover {
 /*--------------------------------------------------------------
 5.0 - Utility
 -------------------------------------------------------------- */
-.bg-blue {
+.bg-blue, .bg-blue .f-left a, .bg-grey p a {
 	background-color: #002C41;
 }
 
-.bg-gold {
-	background-color:  #E5B02C; 
+.bg-gold, .bg-blue .f-left a:hover, .bg-grey p a:hover {
+	background-color: #E5B02C; 
 }
 
 .bg-grey {
-	background-color: #EEEEEE;
+	background-color: #EEE;
 }
 
 .bg-white {
 	background-color: #fff;
 	padding: 35px 7px;
 }
-
-#about-white-bg {
-	padding: 35px 100px 72px 100px;
-}
-
-
-
-
-
 
 
